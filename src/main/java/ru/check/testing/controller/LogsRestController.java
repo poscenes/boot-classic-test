@@ -1,7 +1,7 @@
 package ru.check.testing.controller;
 
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +22,6 @@ public class LogsRestController {
     @PostMapping(value = "/logs", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> recordLogs(@RequestBody LogRecord logRecord) {
         logsWriterService.saveLogs(logRecord);
-        return ResponseEntity.ok("");
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

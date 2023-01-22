@@ -10,7 +10,7 @@ services:
       POSTGRES_USER: admin
       POSTGRES_DB: test
   test_app:
-    image: 'test_app-1.0.0.jar'
+    image: 'test_app.jar'
     ports:
       - "8080:8080"
     depends_on:

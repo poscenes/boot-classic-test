@@ -24,7 +24,7 @@
         </encoder>
     </appender>
 
-    <logger name="ru.check.testing.service.impl.LogsWriterServiceImpl" level="INFO">
+    <logger name="ru.check.testing.service" level="INFO">
         <appender-ref ref="fileAppender" />
     </logger>
 

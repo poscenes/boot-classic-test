@@ -1,5 +1,4 @@
 FROM openjdk:17-jdk-alpine
 MAINTAINER cryMeABeaver
 COPY build/libs/test_app.jar test_app.jar
-EXPOSE 8080
 ENTRYPOINT ["java","-jar","/test_app.jar"]
